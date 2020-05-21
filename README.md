@@ -10,9 +10,9 @@
     <br />
     <br />
     ·
-    <a href="https://github.com/dansantander/re-former">Report Bug</a>
+    <a href="https://github.com/dansantander/re-former/issues">Report Bug</a>
     ·
-    <a href="https://github.com/dansantander/re-former">Request Feature</a>
+    <a href="https://github.com/dansantander/re-former/issues">Request Feature</a>
   </p>
 </p>
 
@@ -48,7 +48,8 @@
 ## Getting Started
 
 #### Installation
-To use this program, you will need to have previously installed:
+To use this program you will need to have previously installed:
+
 * Ruby Language - Version 2.5 up to 2.7 - [Install guide](https://www.ruby-lang.org/en/documentation/installation/)
 
 * Ruby on Rails - Version 5.2 - [Install guide](https://guides.rubyonrails.org/v5.0/getting_started.html#installing-rails)
@@ -76,7 +77,7 @@ To run from the application folder open a new terminal window and cd into the pr
 ```js
 rails server
 ```
-Now you can go to your favorite web browser like Google Crome and access the url
+Now you can go to your favorite web browser like Google Crome and access the url:
 <br> http://localhost:3000/
 
 ### Contributing
