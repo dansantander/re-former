@@ -1,4 +1,4 @@
-<h1> Create a New User </h1>
+<h1> Edit this User </h1>
 
 <!-- classic FORM
 <form action="/users" method="post" accept-charset="UTF-8">
@@ -32,11 +32,12 @@
 <% end %>
 -->
 
+
 <% if @user.errors.any? %>
 
   <div>
     <h2>
-        Next errors prohibited this user from being created:
+        Next errors prohibited this user from being edited:
     </h2>
 
     <ul>
@@ -48,20 +49,11 @@
 
 <% end %>
 
-<%= form_for (@user), :url => users_path do |f| %>
-
+<%= form_for (@user), :url => user_path do |f| %>
+  
   Username: <%= f.text_field :username %><br/>
   Email: <%= f.email_field :email %><br/>
   Password: <%= f.password_field :password %><br/>
 
-  SUBMIT: <%= f.submit "Create"%>
+  SUBMIT: <%= f.submit "Edit" %>
 <% end %>
-
-
-
-
-
-
-
-
-
