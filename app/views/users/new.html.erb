@@ -1,15 +1,18 @@
-<form action="/users" method="post" accept-charset="UTF-8">
 
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-  <label for="username">Username:</label>
-  <input type="text" id="email" name="user[username]"><br><br>
+<%= form_for (@user), :url => users_path do |f| %>
+  Username: <%= f.text_field :username %>
+  Email: <%= f.email_field :email %>
+  Password: <%= f.password_field :password %>
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="user[email]"><br><br>
+  SUBMIT <%= f.submit "create"%>
+<% end %>
 
-  <label for="email">Password:</label>
-  <input type="password" id="password" name="user[password]"><br><br>
 
-  <input type="submit" value="Submit">
-</form>
+
+
+
+
+
+
+
