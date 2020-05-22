@@ -1,5 +1,5 @@
 # RE-FORMER
->  Using different form objects with Rails and HTML.
+>  Here we demonstrate how to manipulate a database record Using different HTML/.erb form structures powered by Rails Active Records.
 
 <br />
 <p align="center">
