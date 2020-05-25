@@ -1,0 +1,59 @@
+<h1> Edit this User </h1>
+
+<!-- classic FORM
+<form action="/users" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label for="user_username">Username:</label>
+  <input type="text" id="user_username" name="user[username]"><br><br>
+
+  <label for="user_email">Email:</label>
+  <input type="text" id="user_email" name="user[email]"><br><br>
+
+  <label for="user_password">Password:</label>
+  <input type="password" id="user_password" name="user[password]">
+
+  <input type="submit" value="Submit">
+</form>
+-->
+
+<!-- form_tag FORM
+<%= form_tag("/users", method: "post") do %>
+  <%= label_tag(:username, "Username:") %>
+  <%= text_field_tag (:username) %>
+  <br>
+  <%= label_tag(:email, "Email:") %>
+  <%= text_field_tag (:email) %>
+  <br>
+  <%= label_tag(:password, "Password:") %>
+  <%= password_field_tag (:password) %>
+  <br>
+  <%= submit_tag("Submit") %>
+<% end %>
+-->
+
+
+<% if @user.errors.any? %>
+
+  <div>
+    <h2>
+        Next errors prohibited this user from being edited:
+    </h2>
+
+    <ul>
+      <% @user.errors.full_messages.each do |error| %>
+        <li> <%= error %> </li>
+      <% end %>
+    </ul>
+  </div>
+
+<% end %>
+
+<%= form_for (@user), :url => user_path do |f| %>
+  
+  Username: <%= f.text_field :username %><br/>
+  Email: <%= f.email_field :email %><br/>
+  Password: <%= f.password_field :password %><br/>
+
+  SUBMIT: <%= f.submit "Edit" %>
+<% end %>
